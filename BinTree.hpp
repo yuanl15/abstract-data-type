@@ -33,7 +33,7 @@ public:
     int remove(BinNodePosi(T) x);//删除以x为根节点的子树
     BinTree<T>* secede(BinNodePosi(T) x);//将该节点从树中删除，并转换为一个独立子树
     template <typename VST>//操作器
-    void travLevel(VST& visit){if(_root) _root->travLevel(visit)};//层次遍历
+    void travLevel(VST& visit){if(_root) _root->travLevel(visit);}//层次遍历
     template <typename VST>
     void travPre(VST& visit){if(_root) _root->travPre(visit);}//先序遍历，调用binNode中的遍历方法
     template <typename VST>
