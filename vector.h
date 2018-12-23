@@ -9,7 +9,7 @@
 #define vector_hpp
 
 #include <cstdio>
-#include "algorithm"
+#include "algorithm.hpp"
 
 typedef int Rank;//秩
 #define DEFAULT_CAPACITY 3
