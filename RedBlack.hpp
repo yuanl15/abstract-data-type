@@ -12,8 +12,12 @@
 #include <stdio.h>
 #include "BST.hpp"
 
-#define IsBlack(x) (!(x) || (RB_BLACK == (x)->color))
-#define IsRed(x) (!IsBlack(x))
+#define IsBlack(x) (!(x) || (RB_BLACK == (x)->color)) //是否为黑节点
+#define IsRed(x) (!IsBlack(x)) //是否为红节点
+#define BlackHeightUpdated(x) (/*红黑树高度更新条件*/ \
+    (stature((x).lc) == stature((x).rc)) && \
+    ((x).height == (IsRed(&x) ? stature((x).lc) : stature((x).lc) + 1)) \
+)
 
 template <typename T> class RedBlack : public BST<T> {
 protected:
