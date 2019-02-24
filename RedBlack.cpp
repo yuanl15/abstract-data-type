@@ -26,8 +26,9 @@ template <typename T> BinNodePosi(T) RedBlack<T>::insert(const T &e) {
 }
 
 // 双红修正算法
-template <typename T> void RedBlack::solveDoubleRed(BinNodePosi(T) x); {
+template <typename T> void RedBlack<T>::solveDoubleRed(BinNodePosi(T) x) {
     if (IsRoot(*x)) {
-        _root->color = RB_BLACK;
+        this->_root->color = RB_BLACK;
     }
+    // TODO
 }
