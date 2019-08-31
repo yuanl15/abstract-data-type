@@ -13,6 +13,7 @@
 #define LChild(i) (((i) << 1) + 1)
 #define RChild(i) (((i) + 1) << 1)
 #define InHeap(i, n) (((i) >= 0) && ((i) < n))
+#define LastInternal(i) Parent(i - 1) // 最后一个内部节点
 
 template <typename T> class PriorityQueue {
     virtual void push(T) = 0;// 按优先级插入词条

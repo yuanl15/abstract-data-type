@@ -53,3 +53,11 @@ template <typename T> int PriorityQueueHeap<T>::percolateDown(int n, int i) {
     }
     return i;
 }
+
+// floyd建堆算法，线性时间复杂度,从最后一个内部节点开始，自下而上的下滤
+template <typename T> void PriorityQueueHeap<T>::heapify(int n) {
+    for (int index = LastInternal(n); InHeap(index, n); index--) {
+        percolateDown(n, index);
+    }
+}
+
