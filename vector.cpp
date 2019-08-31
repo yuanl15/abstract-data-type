@@ -200,3 +200,12 @@ template <typename T> void vector<T>::mergeSort(Rank lo, Rank hi){
     }
     delete[] B;
 }
+
+// 堆排序
+template <typename T> void vector<T>::heapSort(Rank lo, Rank hi) {
+    PriorityQueueHeap<T> complHeap(_elem + lo, hi - lo);
+    while (!complHeap.empty()) {
+        _elem[--hi] = complHeap.top();
+        complHeap.pop();
+    }
+}

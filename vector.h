@@ -10,6 +10,7 @@
 
 #include <cstdio>
 #include "algorithm.hpp"
+#include "PriorityQueue.h"
 
 typedef int Rank;//秩
 #define DEFAULT_CAPACITY 3
