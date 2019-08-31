@@ -10,9 +10,9 @@
 #define PriorityQueue_h
 
 template <typename T> PriorityQueue {
-    virtual void insert(T) = 0;// 按优先级插入词条
-    virtual T getMax() = 0;// 取出优先级最高的词条
-    virtual T delMax() = 0;// 删除优先级最高的词条
+    virtual void push(T) = 0;// 按优先级插入词条
+    virtual T top() = 0;// 取出优先级最高的词条
+    virtual T pop() = 0;// 删除优先级最高的词条
 }
 
 
